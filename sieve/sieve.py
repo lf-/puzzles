@@ -1,3 +1,4 @@
+import sys
 def sieve(upto):
     primes = [x for x in range(2, upto)]
     for n in range(2, upto):
@@ -6,4 +7,4 @@ def sieve(upto):
                 primes[i - 2] = False
     return primes
 
-print(sum([y for y in sieve(1000) if y]))
+print(sum([y for y in sieve(int(sys.argv[1])) if y]))
